@@ -13,3 +13,4 @@ webpack.config.*.js
 babel.preprocess.sass.js
 codecov.yml
 .travis.yml
+package-lock.json

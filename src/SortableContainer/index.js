@@ -162,7 +162,11 @@ export default function sortableContainer(WrappedComponent, config = {withRef: f
         !this.state.sorting
       ) {
         const {useDragHandle} = this.props;
-        const {index, collection} = node.sortableInfo;
+        const {index, collection, disabled} = node.sortableInfo;
+
+        if (disabled) {
+          return;
+        }
 
         if (
           useDragHandle && !closest(e.target, el => el.sortableHandle != null)
